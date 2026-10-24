@@ -91,6 +91,10 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 :root[data-theme="dark"] .btn { background: var(--blue); color: #fff; }
 :root[data-theme="dark"] .btn:hover { background: #5676dc; }
 .btn-nav { padding: 11px 20px; font-size: 15px; }
+.btn-outline { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 1.5px currentColor; }
+.btn-outline:hover { background: var(--card-soft); }
+:root[data-theme="dark"] .btn-outline { background: transparent; color: var(--fg); }
+:root[data-theme="dark"] .btn-outline:hover { background: rgba(255,255,255,.08); }
 .btn-lg { padding: 18px 30px; font-size: 17px; }
 .btn-light { background: var(--white); color: var(--ink); }
 .btn-light:hover { background: var(--white); }
@@ -131,7 +135,7 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 .hero .eyebrow { color: var(--fg-2); }
 :root[data-theme="dark"] .hero .eyebrow { color: var(--blue); }
 .hero-sub { margin-top: 22px; max-width: 520px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5; color: var(--fg-2); }
-.hero-cta { display: flex; align-items: center; gap: 28px; margin-top: 34px; flex-wrap: wrap; }
+.hero-cta { display: flex; align-items: center; gap: 12px; margin-top: 34px; flex-wrap: wrap; }
 .hero-art { position: relative; aspect-ratio: 1 / 1; max-height: 440px; width: 100%; justify-self: end; }
 .hero-art canvas { width: 100%; height: 100%; display: block; }
 
