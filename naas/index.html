@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Node Operator as a Service — Catalyst Labs</title>
+  <meta name="description" content="Catalyst Labs operates validators on Ethereum and the Canton Network for institutions. Multi-cloud across AWS, Google Cloud, Azure, CoreWeave and Oracle Cloud, geographically distributed, engineered for uptime.">
+  <meta property="og:title" content="Node Operator as a Service — Catalyst Labs">
+  <meta property="og:description" content="Validators on Ethereum and Canton. Multi-cloud, geographically distributed, engineered for uptime.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://catalystlabs.dev/naas/">
+  <meta name="theme-color" content="#CFEBFF">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="preload" href="/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/GeneralSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=1">
+</head>
+<body>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="/" aria-label="Catalyst Labs home">
+      <svg class="brand-mark" viewBox="0 0 40 32" fill="currentColor" aria-hidden="true"><rect x="0" y="0" width="18" height="4.4" rx="2.2"/><rect x="0" y="6.9" width="28" height="4.4" rx="2.2"/><rect x="0" y="13.8" width="40" height="4.4" rx="2.2"/><rect x="0" y="20.7" width="28" height="4.4" rx="2.2"/><rect x="0" y="27.6" width="18" height="4.4" rx="2.2"/></svg>
+      <span class="brand-name">catalyst <em>labs</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#networks">Networks</a>
+      <a href="#infrastructure">Infrastructure</a>
+      <a href="#operations">Operations</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-nav" href="#contact">Get in touch</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/">← Catalyst Labs</a>
+    <a href="#networks">Networks</a>
+    <a href="#infrastructure">Infrastructure</a>
+    <a href="#operations">Operations</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero hero-naas">
+    <div class="hero-bars" id="hero-bars" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <a class="crumb" href="/">Catalyst Labs <span>/</span> Node operator as a service</a>
+      <h1><span class="nowrap">Institutional-grade</span><br><strong>Validator Infrastructure</strong></h1>
+      <p class="hero-sub">We operate validators on Ethereum, Canton and Tier-1 blockchains. Multi-cloud, geographically distributed, engineered for uptime.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="link-arrow" href="#networks">See our networks</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOUDS -->
+  <section class="clouds" aria-label="Cloud providers">
+    <div class="wrap clouds-inner">
+      <p class="clouds-label">Deployed across</p>
+      <div class="marquee">
+        <ul class="marquee-track">
+          <li><img src="/assets/aws.svg" alt="Amazon Web Services" class="l-aws"></li>
+          <li><img src="/assets/google-cloud.svg" alt="Google Cloud" class="l-gcp"></li>
+          <li><img src="/assets/azure.svg" alt="Microsoft Azure" class="l-azure"></li>
+          <li><img src="/assets/coreweave.svg" alt="CoreWeave" class="l-cw"></li>
+          <li class="l-oci"><img src="/assets/oracle.svg" alt="Oracle"><span>Cloud Infrastructure</span></li>
+          <li aria-hidden="true"><img src="/assets/aws.svg" alt="" class="l-aws"></li>
+          <li aria-hidden="true"><img src="/assets/google-cloud.svg" alt="" class="l-gcp"></li>
+          <li aria-hidden="true"><img src="/assets/azure.svg" alt="" class="l-azure"></li>
+          <li aria-hidden="true"><img src="/assets/coreweave.svg" alt="" class="l-cw"></li>
+          <li aria-hidden="true" class="l-oci"><img src="/assets/oracle.svg" alt=""><span>Cloud Infrastructure</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NETWORKS -->
+  <section class="section" id="networks">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Networks</p>
+        <h2>Networks we operate.</h2>
+      </div>
+      <div class="net-grid">
+        <article class="net c-blue">
+          <div class="net-logo"><img src="/assets/ethereum.svg" alt=""></div>
+          <div class="net-body"><h3>Ethereum</h3><p>Validators run as distributed validator clusters.</p></div>
+          <span class="pill live">Live</span>
+        </article>
+        <article class="net c-blue">
+          <div class="net-logo"><img src="/assets/canton-mark.svg" alt=""></div>
+          <div class="net-body"><h3>Canton Network</h3><p>MainNet validator, allowlisted by all Super Validators.</p></div>
+          <span class="pill live">Live</span>
+        </article>
+        <article class="net c-yellow">
+          <div class="net-logo"><img src="/assets/bitcoin.svg" alt=""></div>
+          <div class="net-body"><h3>Bitcoin</h3><p>Self-hosted full nodes.</p></div>
+          <span class="pill live">Live</span>
+        </article>
+        <article class="net c-purple">
+          <div class="net-logo"><img src="/assets/solana.svg" alt="" class="sm"></div>
+          <div class="net-body"><h3>Solana</h3><p>Dedicated RPC infrastructure.</p></div>
+          <span class="pill live">Live</span>
+        </article>
+        <article class="net c-green">
+          <div class="net-logo"><img src="/assets/aptos.svg" alt=""></div>
+          <div class="net-body"><h3>Aptos</h3><p>Validator and full node operations.</p></div>
+          <span class="pill live">Live</span>
+        </article>
+        <article class="net c-red">
+          <div class="net-logo"><img src="/assets/near.svg" alt="" class="sm"></div>
+          <div class="net-body"><h3>NEAR</h3><p>Validator and RPC node operations.</p></div>
+          <span class="pill live">Live</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURE -->
+  <section class="section section-blue" id="infrastructure">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Infrastructure</p>
+        <h2>Built for resilience.</h2>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>5</strong><span>Cloud providers</span></div>
+        <div class="stat"><strong>3</strong><span>Continents</span></div>
+        <div class="stat"><strong>24/7</strong><span>Engineering on-call</span></div>
+        <div class="stat"><strong>0</strong><span>Slashing events</span></div>
+      </div>
+      <div class="tiles">
+        <article class="tile tile-blue">
+          <h3>Multi-cloud</h3>
+          <p>AWS, Google Cloud, Azure, CoreWeave and Oracle Cloud. Separate accounts, credentials and quotas per node.</p>
+          <div class="stripes" aria-hidden="true"></div>
+        </article>
+        <article class="tile tile-yellow">
+          <h3>Geographic diversity</h3>
+          <p>North America, Europe and Asia-Pacific. Independent regions and availability zones.</p>
+          <div class="stripes" aria-hidden="true"></div>
+        </article>
+        <article class="tile tile-purple">
+          <h3>Distributed validators</h3>
+          <p>Keys split across machines and clouds. Threshold signing, no single point of failure.</p>
+          <div class="stripes" aria-hidden="true"></div>
+        </article>
+        <article class="tile tile-green">
+          <h3>Key management</h3>
+          <p>Keys generated offline and held in remote signers with slashing protection.</p>
+          <div class="stripes" aria-hidden="true"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATIONS -->
+  <section class="section" id="operations">
+    <div class="wrap ops-wrap">
+      <div class="section-head">
+        <p class="eyebrow">Operations</p>
+        <h2>Operated like production.</h2>
+      </div>
+      <ul class="ops">
+        <li><h3>24/7 monitoring and on-call</h3><p>Every host instrumented. Alerts page an engineer.</p></li>
+        <li><h3>Encrypted off-site backups</h3><p>Every four hours. Restores rehearsed, not assumed.</p></li>
+        <li><h3>Staged upgrades</h3><p>TestNet first, then rolling through MainNet.</p></li>
+        <li><h3>Hardened hosts</h3><p>No public inbound. Per-host firewalls. Locked-down access.</p></li>
+        <li><h3>Runbooks and change control</h3><p>Every procedure written down and versioned.</p></li>
+        <li><h3>Isolated failure domains</h3><p>One node's incident never becomes another's.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-purple" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions, answered.</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>What is node operator as a service?</summary>
+          <p>We run blockchain validators and nodes for institutions, end to end. You hold the stake and the mandate. We run the infrastructure.</p>
+        </details>
+        <details>
+          <summary>Which networks do you support?</summary>
+          <p>Ethereum and Canton Network validators, plus Bitcoin, Solana, Aptos and NEAR nodes. New networks on request.</p>
+        </details>
+        <details>
+          <summary>Where does your infrastructure run?</summary>
+          <p>Across AWS, Google Cloud, Microsoft Azure, CoreWeave and Oracle Cloud in North America, Europe and Asia-Pacific, in separate accounts and regions.</p>
+        </details>
+        <details>
+          <summary>How do you handle keys?</summary>
+          <p>Generated offline, stored in remote signers with slashing protection, never on the host that talks to the network. Access is hardware-backed and least-privilege.</p>
+        </details>
+        <details>
+          <summary>How do we work with you?</summary>
+          <p>Email us. We scope the validators, regions and reporting you need and get them running.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="cta" id="contact">
+    <div class="wrap cta-inner">
+      <div>
+        <h2>We run the nodes.<br>You build.</h2>
+        <p>Talk to the engineers who operate the infrastructure.</p>
+      </div>
+      <a class="btn btn-lg" href="mailto:biz@catalystlabs.dev">biz@catalystlabs.dev</a>
+    </div>
+    <div class="cta-stripes" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <a class="brand" href="/" aria-label="Catalyst Labs home">
+        <svg class="brand-mark" viewBox="0 0 40 32" fill="currentColor" aria-hidden="true"><rect x="0" y="0" width="18" height="4.4" rx="2.2"/><rect x="0" y="6.9" width="28" height="4.4" rx="2.2"/><rect x="0" y="13.8" width="40" height="4.4" rx="2.2"/><rect x="0" y="20.7" width="28" height="4.4" rx="2.2"/><rect x="0" y="27.6" width="18" height="4.4" rx="2.2"/></svg>
+        <span class="brand-name">catalyst <em>labs</em></span>
+      </a>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#apps">Apps</a>
+        <a href="/#chains">Chains</a>
+        <a href="/naas/">Node ops</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>© 2026 CATALYST LABS L.L.C-FZ. All rights reserved.</p>
+      <p><a href="mailto:biz@catalystlabs.dev">biz@catalystlabs.dev</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js?v=1"></script>
+</body>
+</html>
