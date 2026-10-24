@@ -185,7 +185,14 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 @keyframes rise { to { opacity: 1; transform: none; } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 
-/* --- facts strip ----------------------------------------------------------- */
+/* --- hero stats ------------------------------------------------------------ */
+.hero-stats { margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(28,28,26,.12); padding: 20px 0 26px; }
+.hero-stats > div { display: flex; align-items: baseline; gap: 10px; padding-left: 22px; border-left: 1px solid rgba(28,28,26,.12); }
+.hero-stats > div:first-child { padding-left: 0; border-left: 0; }
+.hero-stats dt { font-family: var(--sans); font-weight: 700; font-size: 26px; letter-spacing: -0.02em; line-height: 1; color: var(--fg); }
+.hero-stats dd { margin: 0; font-size: 14px; font-weight: 600; color: var(--fg-2); }
+:root[data-theme="dark"] .hero-stats, :root[data-theme="dark"] .hero-stats > div { border-color: rgba(255,255,255,.14); }
+/* --- facts strip (unused) --------------------------------------------------- */
 .facts { background: var(--bg); border-bottom: 1px solid var(--line); }
 .facts-inner { display: grid; grid-template-columns: repeat(4, 1fr); padding-top: 22px; padding-bottom: 22px; }
 .facts-inner > div { display: flex; flex-direction: column; gap: 2px; padding: 4px 24px 4px 0; border-left: 1px solid var(--line); padding-left: 22px; }
@@ -383,6 +390,8 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
   .hero-art { max-height: 200px; aspect-ratio: auto; height: 200px; width: 100%; justify-self: stretch; }
   .hero-cta { gap: 20px; }
   .facts-inner { grid-template-columns: 1fr 1fr; gap: 14px 0; }
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 16px 0; }
+  .hero-stats > div:nth-child(3) { padding-left: 0; border-left: 0; }
   .facts-inner > div:nth-child(3) { border-left: 0; padding-left: 0; }
   .duo, .apps { grid-template-columns: 1fr; }
   .duo-card { min-height: 0; }
@@ -416,6 +425,8 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
   .cta .btn-lg { width: 100%; }
   .facts-inner { grid-template-columns: 1fr 1fr; }
   .facts strong { font-size: 22px; }
+  .hero-stats > div { flex-direction: column; gap: 4px; }
+  .hero-stats dt { font-size: 22px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
