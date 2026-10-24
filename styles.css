@@ -194,14 +194,14 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 .facts span { font-size: 14px; color: var(--fg-3); }
 
 /* --- sections -------------------------------------------------------------- */
-.section { padding: clamp(60px, 8vw, 108px) 0; scroll-margin-top: 20px; }
+.section { padding: clamp(48px, 5.5vw, 80px) 0; scroll-margin-top: 20px; }
 .section-blue { background: var(--tint-blue); }
 .section-purple { background: var(--tint-purple); }
 .section-yellow { background: var(--tint-yellow); }
 .section-green { background: var(--tint-green-soft); }
 .section-red { background: var(--tint-red); }
 :root[data-theme="dark"] .section-blue .eyebrow, :root[data-theme="dark"] .section-purple .eyebrow, :root[data-theme="dark"] .section-yellow .eyebrow { color: var(--fg-2); }
-.section-head { margin-bottom: clamp(28px, 4vw, 44px); max-width: 720px; }
+.section-head { margin-bottom: clamp(24px, 3vw, 36px); max-width: 720px; }
 .section-head.row { max-width: none; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
 .section-head.row p { max-width: 520px; color: var(--fg-2); }
 
@@ -248,7 +248,7 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 
 /* --- chains ---------------------------------------------------------------- */
 .chains { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.chain { background: var(--card-soft); color: var(--fg); border-radius: var(--r); padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 18px; min-height: 196px; }
+.chain { background: var(--card-soft); color: var(--fg); border-radius: var(--r); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
 .chain-logo { height: 44px; display: flex; align-items: center; }
 .chain-logo img { height: 34px; width: auto; max-width: 100%; }
 .chain-logo img.wide { height: 20px; }
@@ -256,10 +256,11 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 :root[data-theme="dark"] .chain-logo img.canton { background: #fff; border-radius: 50%; padding: 5px; height: 40px; }
 .chain-logo svg { color: var(--fg); }
 .chain-logo .wordmark { font-family: var(--sans); font-weight: 600; font-size: 28px; letter-spacing: -0.02em; line-height: 1; }
-.chain-body { margin-top: auto; }
+.chain-body { flex: 1; display: flex; flex-direction: column; }
 .chain h3 { font-size: 20px; }
 .chain p { margin-top: 5px; font-size: 14.5px; color: var(--fg-2); line-height: 1.45; }
-.chain .pill { align-self: flex-start; margin-top: 12px; }
+.chain .pill { align-self: flex-start; margin-top: auto; }
+.chain p { margin-bottom: 16px; }
 
 
 /* --- naas teaser ----------------------------------------------------------- */
@@ -273,7 +274,7 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 
 /* --- cta ------------------------------------------------------------------- */
 .cta { position: relative; background: var(--tint-green); overflow: hidden; }
-.cta-inner { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; padding-top: clamp(64px, 8vw, 104px); padding-bottom: clamp(72px, 9vw, 112px); }
+.cta-inner { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; padding-top: clamp(48px, 5.5vw, 80px); padding-bottom: clamp(60px, 6.5vw, 92px); }
 .cta h2 { color: var(--cta-h); }
 .cta p { margin-top: 14px; font-size: 18px; color: var(--fg-2); max-width: 480px; }
 .cta-stripes { position: absolute; left: 0; right: 0; bottom: 0; height: 36px; background: repeating-linear-gradient(90deg, var(--green) 0 4px, transparent 4px 12px); opacity: .55; }
