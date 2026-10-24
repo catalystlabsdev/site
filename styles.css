@@ -152,7 +152,9 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 /* --- hero ------------------------------------------------------------------ */
 .hero { position: relative; background: var(--hero-bg); color: var(--fg); margin-top: -76px; padding: 76px 0 0; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 5vw, 72px); align-items: center; padding-top: clamp(64px, 9vh, 112px); padding-bottom: clamp(56px, 8vh, 96px); }
-.hero h1 { max-width: 640px; }
+.hero h1 { max-width: 620px; font-size: clamp(40px, 5.6vw, 72px); line-height: 1.0; letter-spacing: -0.035em; }
+.hero h1 strong { font-weight: 700; color: var(--blue); }
+:root[data-theme="dark"] .hero h1 strong { color: #609af8; }
 .hero .eyebrow { color: var(--fg-2); }
 :root[data-theme="dark"] .hero .eyebrow { color: var(--fg-2); }
 .hero-sub { margin-top: 22px; max-width: 520px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5; color: var(--fg-2); }
