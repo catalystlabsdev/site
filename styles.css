@@ -526,11 +526,14 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 /* final pass: whole stripes only (no clipped sliver at the edge); short tile titles sit on their text */
 .tile .stripes, .duo-card .stripes { background: linear-gradient(90deg, var(--c) 0 5px, transparent 5px) left / 14px 100% round; }
 @supports (grid-template-rows: subgrid) { .tile h3 { align-self: end; } }
-/* What we do: three cards across on laptops, stacked below 900px */
-@media (max-width: 900px) {
+/* What we do: three cards across on laptops, stacked at 1080px and below */
+@media (max-width: 1080px) {
   .br-wide { display: none; }
   .duo { grid-template-columns: 1fr; grid-template-rows: none; row-gap: var(--gap); }
   .duo-card { min-height: 0; display: flex; flex-direction: column; grid-row: auto; }
   .duo-card .stripes { margin-top: 24px; }
   .duo-card p { max-width: none; }
 }
+/* What we do: slightly tighter tags so short sets stay on one row at 3-across */
+.duo-card .chips { gap: 6px; }
+.duo-card .chip { padding: 6px 10px; }
