@@ -543,3 +543,11 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 .tile p { max-width: 460px; min-height: 0; }
 @supports (grid-template-rows: subgrid) { .tile h3 { align-self: start; } .tile .stripes { margin-top: 32px; } }
 @media (max-width: 560px) { .tiles { grid-template-columns: 1fr; } }
+/* contact: email + Telegram side by side */
+.cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-tg { gap: 10px; }
+.btn-tg .tg-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.cta .btn-outline { color: var(--ink); }
+:root[data-theme="dark"] .cta .btn-outline { color: var(--fg); background: transparent; }
+@media (max-width: 560px) { .cta-actions { width: 100%; flex-direction: column; } .cta-actions .btn-lg { width: 100%; } }
+.cta p { max-width: 560px; text-wrap: pretty; }
