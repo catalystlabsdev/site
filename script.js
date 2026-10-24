@@ -12,6 +12,20 @@
     });
   }
 
+  // Theme toggle (initial theme is set inline in <head> to avoid a flash)
+  var root = document.documentElement;
+  document.querySelectorAll('.theme-toggle').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      redrawAll();
+    });
+  });
+  var redraws = [];
+  function redrawAll() { redraws.forEach(function (f) { f(); }); }
+  function cssVar(name) { return getComputedStyle(root).getPropertyValue(name).trim(); }
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function canvasIn(host, drawFn) {
@@ -29,6 +43,7 @@
     var running = true, raf = 0, t0 = performance.now();
     function loop(now) { if (!running) return; drawFn(ctx, W, H, now - t0); raf = requestAnimationFrame(loop); }
     resize();
+    redraws.push(function () { if (reduce || !running) drawFn(ctx, W, H, 2600); });
     if (reduce) { drawFn(ctx, W, H, 2600); }
     else {
       raf = requestAnimationFrame(loop);
@@ -58,6 +73,7 @@
       var step = H / ROWS, thick = Math.max(4, step * 0.46), thin = Math.max(2, step * 0.2);
       var gap = Math.max(8, W * 0.03);
       var s = t / 1000;
+      var bars = cssVar('--bars') || '#6586EA', barsDim = cssVar('--bars-dim') || 'rgba(101,134,234,.45)';
       var apex = 0.5 + 0.28 * Math.sin(s * 0.45);           // where the chevron peaks (0..1)
       var breathe = 0.86 + 0.1 * Math.sin(s * 0.7);          // overall length
       for (var i = 0; i < ROWS; i++) {
@@ -68,11 +84,11 @@
         len += j.a * Math.sin(s * j.w + j.p);
         var split = Math.min(0.95, Math.max(0.14, len)) * W;
         var y = i * step + (step - thick) / 2;
-        ctx.fillStyle = '#6586EA';
+        ctx.fillStyle = bars;
         ctx.globalAlpha = 1;
         roundRect(ctx, 0, y, split, thick, thick / 2);
         var x2 = split + gap;
-        if (x2 < W) { ctx.globalAlpha = 0.45; roundRect(ctx, x2, y + (thick - thin) / 2, W - x2, thin, thin / 2); }
+        if (x2 < W) { ctx.fillStyle = barsDim; roundRect(ctx, x2, y + (thick - thin) / 2, W - x2, thin, thin / 2); }
       }
       ctx.globalAlpha = 1;
     });
@@ -102,15 +118,16 @@
       var cycle = (t / 9000) % 1;
       var base = 0.28 + 0.62 * ease(cycle < 0.5 ? cycle * 2 : 2 - cycle * 2);
       var s = t / 1000;
+      var bars = cssVar('--bars') || '#6586EA', barsDim = cssVar('--bars-dim') || 'rgba(101,134,234,.5)';
       for (var i = 0; i < ROWS; i++) {
         var r = rows[i];
         var j = r.a1 * Math.sin(s * r.w1 + r.p1) + r.a2 * Math.sin(s * r.w2 + r.p2);
         var split = Math.min(0.96, Math.max(0.12, base + j)) * W;
         var y = i * step + (step - thick) / 2;
-        ctx.globalAlpha = 1; ctx.fillStyle = '#6586EA';
+        ctx.globalAlpha = 1; ctx.fillStyle = bars;
         ctx.fillRect(0, y, split, thick);
         var x2 = split + gap;
-        if (x2 < W) { ctx.globalAlpha = 0.5; ctx.fillRect(x2, y + (thick - thin) / 2, W - x2, thin); }
+        if (x2 < W) { ctx.fillStyle = barsDim; ctx.fillRect(x2, y + (thick - thin) / 2, W - x2, thin); }
       }
       ctx.globalAlpha = 1;
     });
