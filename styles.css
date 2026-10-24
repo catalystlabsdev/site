@@ -537,3 +537,9 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 /* What we do: slightly tighter tags so short sets stay on one row at 3-across */
 .duo-card .chips { gap: 6px; }
 .duo-card .chip { padding: 6px 10px; }
+/* Infrastructure tiles: 2×2 so every title fits on one line; title + text start at the same place in every tile */
+.tiles { grid-template-columns: repeat(2, 1fr); }
+.tile { min-height: 0; }
+.tile p { max-width: 460px; min-height: 0; }
+@supports (grid-template-rows: subgrid) { .tile h3 { align-self: start; } .tile .stripes { margin-top: 32px; } }
+@media (max-width: 560px) { .tiles { grid-template-columns: 1fr; } }
