@@ -18,6 +18,8 @@
     b.addEventListener('click', function () {
       var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
+      var tc = document.querySelector('meta[name=theme-color]');
+      if (tc) tc.content = next === 'dark' ? '#031b62' : '#CFEBFF';
       try { localStorage.setItem('theme', next); } catch (e) {}
       redrawAll();
     });

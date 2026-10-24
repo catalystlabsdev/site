@@ -18,8 +18,8 @@
   <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="preload" href="/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/GeneralSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-  <link rel="stylesheet" href="/styles.css?v=27">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'?'#031b62':'#CFEBFF';}catch(e){}})();</script>
+  <link rel="stylesheet" href="/styles.css?v=32">
 </head>
 <body>
 
@@ -191,7 +191,7 @@
           </div>
         </article>
         <article class="chain">
-          <div class="chain-logo"><img class="wide" src="/assets/robinhood.svg" alt="Robinhood Chain"></div>
+          <div class="chain-logo"><img class="rh" src="/assets/robinhood-mark.svg" alt="Robinhood Chain"></div>
           <div class="chain-body">
             <h3>Robinhood Chain</h3>
             <p>Arbitrum-based L2 for tokenized stocks. Promorphic reaches stock tokens here.</p>
@@ -199,7 +199,7 @@
           </div>
         </article>
         <article class="chain">
-          <div class="chain-logo"><svg viewBox="0 0 40 40" width="36" height="36" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="10"/><circle cx="20" cy="20" r="3" fill="currentColor" stroke="none"/></svg></div>
+          <div class="chain-logo"><svg viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3.4" role="img" aria-label="Logos"><circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="10"/><circle cx="20" cy="20" r="3" fill="currentColor" stroke="none"/></svg></div>
           <div class="chain-body">
             <h3>Logos</h3>
             <p>Privacy-first network stack. Applications in research and development.</p>
@@ -217,7 +217,7 @@
         <p class="eyebrow">Node operator as a service</p>
         <h2>Institutional-grade validator infrastructure.</h2>
         <p class="lede">We operate validators and nodes for institutions across five clouds and three continents. Keys offline, signing distributed, upgrades staged.</p>
-        <a class="btn" href="/naas/">Explore node ops</a>
+        <a class="btn btn-arrow" href="/naas/">Explore validators</a>
       </div>
       <ul class="naas-list">
         <li><h3>Ethereum, Canton and more</h3><p>Validators on Ethereum and Canton. Bitcoin, Solana, Aptos and NEAR nodes. New networks on request.</p></li>
@@ -261,11 +261,11 @@
       <p><strong>CATALYST LABS L.L.C-FZ</strong></p>
       <p>Meydan Grandstand, 6th floor, Meydan Road, <span class="nowrap">Dubai, U.A.E.</span></p>
       <p><a href="mailto:biz@catalystlabs.dev">biz@catalystlabs.dev</a></p>
-      <p>© 2026 CATALYST LABS L.L.C-FZ. All rights reserved.</p>
+      <p>© 2026 CATALYST LABS L.L.C-FZ. <span class="nowrap">All rights reserved.</span></p>
     </div>
   </div>
 </footer>
 
-<script src="/script.js?v=3"></script>
+<script src="/script.js?v=5"></script>
 </body>
 </html>

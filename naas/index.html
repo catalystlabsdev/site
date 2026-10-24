@@ -14,8 +14,8 @@
   <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="preload" href="/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/GeneralSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-  <link rel="stylesheet" href="/styles.css?v=27">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'?'#031b62':'#CFEBFF';}catch(e){}})();</script>
+  <link rel="stylesheet" href="/styles.css?v=32">
 </head>
 <body>
 
@@ -57,8 +57,8 @@
       <h1><span class="nowrap">Institutional-grade</span><br><strong>Validator Infrastructure</strong></h1>
       <p class="hero-sub">We operate validators on Ethereum, Canton and Tier-1 blockchains. Multi-cloud, geographically distributed, engineered for uptime.</p>
       <div class="hero-cta">
-        <a class="btn" href="#contact">Get in touch</a>
-        <a class="link-arrow" href="#networks">See our networks</a>
+        <a class="btn btn-arrow" href="#contact">Get in touch</a>
+        <a class="btn btn-outline btn-arrow" href="#networks">See our networks</a>
       </div>
     </div>
   </section>
@@ -85,7 +85,7 @@
   </section>
 
   <!-- NETWORKS -->
-  <section class="section" id="networks">
+  <section class="section section-green" id="networks">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Networks</p>
@@ -136,7 +136,7 @@
       <div class="stats">
         <div class="stat"><strong>5</strong><span>Cloud providers</span></div>
         <div class="stat"><strong>3</strong><span>Continents</span></div>
-        <div class="stat"><strong>24/7</strong><span>Engineering on-call</span></div>
+        <div class="stat"><strong>24/7</strong><span>Engineering on‑call</span></div>
         <div class="stat"><strong>0</strong><span>Slashing events</span></div>
       </div>
       <div class="tiles">
@@ -165,7 +165,7 @@
   </section>
 
   <!-- OPERATIONS -->
-  <section class="section" id="operations">
+  <section class="section section-yellow" id="operations">
     <div class="wrap ops-wrap">
       <div class="section-head">
         <p class="eyebrow">Operations</p>
@@ -246,11 +246,11 @@
       <p><strong>CATALYST LABS L.L.C-FZ</strong></p>
       <p>Meydan Grandstand, 6th floor, Meydan Road, <span class="nowrap">Dubai, U.A.E.</span></p>
       <p><a href="mailto:biz@catalystlabs.dev">biz@catalystlabs.dev</a></p>
-      <p>© 2026 CATALYST LABS L.L.C-FZ. All rights reserved.</p>
+      <p>© 2026 CATALYST LABS L.L.C-FZ. <span class="nowrap">All rights reserved.</span></p>
     </div>
   </div>
 </footer>
 
-<script src="/script.js?v=3"></script>
+<script src="/script.js?v=5"></script>
 </body>
 </html>
