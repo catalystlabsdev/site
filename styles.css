@@ -171,7 +171,7 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 
 /* --- hero ------------------------------------------------------------------ */
 .hero { position: relative; background: var(--hero-bg); color: var(--fg); margin-top: -76px; padding: 76px 0 0; overflow: hidden; }
-.hero { --hero-text: 600px; --hero-gap: 56px; --stats-h: 75px; --art-top: 0px; --art-gap: 28px; }
+.hero { --hero-text: 600px; --hero-gap: 56px; --stats-h: 0px; --art-top: 0px; --art-gap: 0px; }
 .hero-grid { position: static; display: block; padding-top: clamp(72px, 10vh, 120px); padding-bottom: clamp(56px, 8vh, 96px); }
 .hero-copy { position: relative; z-index: 1; max-width: var(--hero-text); }
 .hero-stats { position: relative; z-index: 1; }
