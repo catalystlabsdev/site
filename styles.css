@@ -551,3 +551,12 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 :root[data-theme="dark"] .cta .btn-outline { color: var(--fg); background: transparent; }
 @media (max-width: 560px) { .cta-actions { width: 100%; flex-direction: column; } .cta-actions .btn-lg { width: 100%; } }
 .cta p { max-width: 560px; text-wrap: pretty; }
+/* footer: giant sunken wordmark, cut at 50% */
+.footer { overflow: hidden; }
+.footer-word-wrap { --fw: min(calc((100vw - 2 * var(--gutter)) / 4.78), calc((var(--max) - 2 * var(--gutter)) / 4.78)); }
+.footer-word { font-family: var(--sans); font-size: var(--fw); line-height: 1; letter-spacing: -0.045em; white-space: nowrap; color: rgba(28,28,26,.07); height: calc(var(--fw) * .497); overflow: hidden; user-select: none; }
+.footer-word span, .footer-word em { position: relative; top: calc(var(--fw) * -0.14); }
+.footer-word-wrap { margin-top: 12px; }
+.footer-word span { font-weight: 700; }
+.footer-word em { font-style: normal; font-weight: 400; }
+:root[data-theme="dark"] .footer-word { color: rgba(255,255,255,.07); }
