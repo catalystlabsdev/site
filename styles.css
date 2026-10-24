@@ -293,7 +293,7 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 .footer .brand-name { font-size: 18px; }
 .footer-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 14px; font-size: 14px; color: var(--fg-2); }
 .footer-links a:hover { color: var(--fg); }
-.footer-legal { font-size: 13px; color: var(--fg-3); line-height: 1.6; text-align: right; max-width: 420px; }
+.footer-legal { font-size: 13px; color: var(--fg-3); line-height: 1.6; text-align: right; max-width: 460px; }
 .footer-legal strong { color: var(--fg); font-weight: 600; }
 .footer-legal a { color: var(--fg-2); }
 
