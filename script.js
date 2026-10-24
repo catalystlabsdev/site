@@ -69,7 +69,7 @@
     for (var i = 0; i < 60; i++) jit.push({ a: 0.02 + rnd() * 0.04, w: 0.5 + rnd() * 0.8, p: rnd() * Math.PI * 2 });
     canvasIn(art, function (ctx, W, H, t) {
       ctx.clearRect(0, 0, W, H);
-      var ROWS = Math.max(9, Math.min(22, Math.round(H / 20)));
+      var ROWS = Math.max(9, Math.min(36, Math.round(H / 26)));
       var step = H / ROWS, thick = Math.max(4, step * 0.46), thin = Math.max(2, step * 0.2);
       var gap = Math.max(8, W * 0.03);
       var s = t / 1000;
@@ -86,7 +86,7 @@
         var y = i * step + (step - thick) / 2;
         ctx.fillStyle = bars;
         ctx.globalAlpha = 1;
-        roundRect(ctx, 0, y, split, thick, thick / 2);
+        roundRect(ctx, -thick, y, split + thick, thick, thick / 2);
         var x2 = split + gap;
         if (x2 < W) { ctx.fillStyle = barsDim; roundRect(ctx, x2, y + (thick - thin) / 2, W - x2, thin, thin / 2); }
       }
