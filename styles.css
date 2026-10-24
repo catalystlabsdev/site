@@ -107,7 +107,7 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 .brand-name em { font-style: normal; font-weight: 500; color: var(--fg-2); }
 .nav-links { display: flex; gap: 28px; justify-self: center; }
 .nav-right { display: flex; align-items: center; gap: 8px; justify-self: end; }
-.theme-toggle { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; display: grid; place-items: center; padding: 0; transition: background .2s; }
+.theme-toggle { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--card-soft); color: var(--fg); cursor: pointer; display: grid; place-items: center; padding: 0; transition: background .2s; }
 .theme-toggle:hover { background: var(--line); }
 .theme-toggle svg { width: 18px; height: 18px; }
 .theme-toggle .moon { display: none; }
