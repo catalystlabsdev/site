@@ -213,6 +213,8 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 .app-logo { width: 56px; height: 56px; border-radius: 16px; background: var(--white); display: grid; place-items: center; color: var(--ink); box-shadow: 0 1px 0 rgba(28,28,26,.06); }
 .app-logo img, .app-logo svg { height: 26px; width: auto; }
 .app-logo img.lg { height: 38px; }
+.app-logo-tile { background: none; box-shadow: none; overflow: hidden; }
+.app-logo-tile img { width: 56px; height: 56px; border-radius: 16px; }
 .app-body { margin-top: auto; }
 .app h3 { font-size: 26px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .app h3 small { font-family: var(--body); font-weight: 500; font-size: 14px; color: var(--ink-3); letter-spacing: 0; }
