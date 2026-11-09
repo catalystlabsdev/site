@@ -265,12 +265,15 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 
 /* --- chains ---------------------------------------------------------------- */
 #chains h2 { text-wrap: balance; }
-.chains { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.chains { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--gap); }
+.chain { grid-column: span 2; }
+.chain:nth-child(n+4) { grid-column: span 3; }
 .chain { background: var(--card-soft); color: var(--fg); border-radius: var(--r); padding: 24px; display: flex; flex-direction: column; gap: 16px; }
 .chain-logo { width: 52px; height: 52px; flex-shrink: 0; display: grid; place-items: center; border-radius: 14px; background: var(--white); color: var(--fg); }
 .chain-logo img { display: block; width: auto; height: 26px; filter: brightness(0); opacity: .9; }
 .chain-logo img.eth { height: 30px; }
 .chain-logo img.rh { height: 27px; }
+.chain-logo img.stellar { height: 24px; }
 .chain-logo svg { width: 30px; height: 30px; opacity: .9; }
 :root[data-theme="dark"] .chain-logo { background: rgba(255,255,255,.1); }
 :root[data-theme="dark"] .chain-logo img { filter: brightness(0) invert(1); opacity: 1; }
@@ -407,7 +410,7 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 
 /* --- responsive ------------------------------------------------------------ */
 @media (max-width: 1080px) {
-  .chains, .stats, .tiles { grid-template-columns: 1fr 1fr; }
+  .stats, .tiles { grid-template-columns: 1fr 1fr; }
   .net-grid { grid-template-columns: 1fr 1fr; }
   .net { min-height: 200px; }
   .ops-wrap, .faq-wrap, .naas-teaser { grid-template-columns: 1fr; }
@@ -560,3 +563,5 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1
 .footer-word span { font-weight: 700; }
 .footer-word em { font-style: normal; font-weight: 400; }
 :root[data-theme="dark"] .footer-word { color: rgba(255,255,255,.07); }
+
+@media (max-width: 720px) { .chains { grid-template-columns: 1fr; } .chain, .chain:nth-child(n+4) { grid-column: auto; } }
